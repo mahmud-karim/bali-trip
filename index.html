@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bali Flight & Layover Plan</title>
+    <link rel="stylesheet" href="styles.css?v=stats-rail-3">
+  </head>
+  <body>
+    <header class="hero">
+      <img
+        class="hero-photo"
+        src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=2200&q=85"
+        alt="Bali coastline and green terraces at golden hour"
+      >
+      <div class="hero-shade"></div>
+      <nav class="topbar" aria-label="Trip sections">
+        <a href="#route">Route</a>
+        <a href="#layovers">Layovers</a>
+        <a href="#stays">Stays</a>
+        <a href="#arrival">Arrival</a>
+      </nav>
+      <section class="hero-content" aria-labelledby="page-title">
+        <p class="eyebrow">Capital One Travel itinerary read June 15, 2026</p>
+        <h1 id="page-title">New York to Bali, paced for the long waits.</h1>
+        <p class="dek">
+          A practical layover plan for the Aug. 16-26 route: sleep when the clock says sleep,
+          stay airside when the connection is tight, and use the one daytime Incheon stop with intent.
+        </p>
+        <div class="hero-stats" aria-label="Trip summary">
+          <span><strong>6</strong> flight legs</span>
+          <span><strong>4</strong> layovers</span>
+          <span><strong>13h 19m</strong> longest pause</span>
+          <span><strong>Aug 21-25</strong> Seminyak stay</span>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="section route-section" id="route" aria-labelledby="route-title">
+        <div class="section-heading">
+          <div class="route-card-icon" aria-hidden="true">GO</div>
+          <div class="route-card-copy">
+            <h2 id="route-title">New York -> Bali</h2>
+            <p>Round trip | 2 travelers | Economy</p>
+            <button type="button" class="route-card-action">View itinerary</button>
+          </div>
+          <button type="button" class="route-card-menu" aria-label="More route options">...</button>
+        </div>
+
+        <div class="route-panel interactive-route" data-route-explorer>
+          <div class="route-map" data-route-map>
+            <div class="route-map-topbar" aria-label="Map display controls">
+              <button type="button" class="map-tool-button">Direction</button>
+              <button type="button" class="map-tool-button">Layers</button>
+              <button type="button" class="map-tool-button map-tool-square" aria-label="Full screen">[]</button>
+            </div>
+
+            <div class="route-legend-card" aria-label="Flight route legend">
+              <div class="legend-group">
+                <div class="legend-heading"><strong>Outbound</strong><span class="legend-dash outbound"></span></div>
+                <p><span>LGA -> DTW</span><em>2h 21m</em></p>
+                <p><span>DTW -> ICN</span><em>14h 45m</em></p>
+                <p><span>ICN -> DPS</span><em>6h 50m</em></p>
+              </div>
+              <div class="legend-group">
+                <div class="legend-heading"><strong>Return</strong><span class="legend-dash return"></span></div>
+                <p><span>DPS -> ICN</span><em>7h 15m</em></p>
+                <p><span>ICN -> ATL</span><em>14h</em></p>
+                <p><span>ATL -> LGA</span><em>2h 10m</em></p>
+              </div>
+              <small>All times are flight durations</small>
+            </div>
+
+            <div
+              id="public-route-map"
+              class="public-route-map"
+              role="application"
+              aria-label="Public map showing the New York to Bali flight route"
+            ></div>
+            <aside class="route-detail-card map-activity-drawer" data-route-detail aria-live="polite">
+              <div class="drawer-grip" aria-hidden="true"></div>
+              <div class="detail-kicker">
+                <p class="eyebrow">Selected stop</p>
+                <span>Tap any pin or flight</span>
+              </div>
+              <h3>New York departure</h3>
+              <p>
+                Start calm: leave buffer for LaGuardia, keep the overnight kit under the seat,
+                and make the Detroit hotel plan easy to reach after landing.
+              </p>
+              <ul>
+                <li>Flight: LGA 9:00p Sun Aug 16 -> DTW 11:21p</li>
+                <li>Pack: toothbrush, charger, sleep mask, clean shirt</li>
+                <li>Mode: preserve energy for the long Pacific crossing</li>
+              </ul>
+            </aside>
+
+            <p class="map-credit">CARTO Voyager / OpenStreetMap contributors</p>
+          </div>
+
+          <script type="application/json" id="route-map-data">
+            {
+              "locations": {
+                "lga": {
+                  "eyebrow": "Start",
+                  "title": "New York departure",
+                  "summary": "Start calm: leave buffer for LaGuardia, keep the overnight kit under the seat, and make the Detroit hotel plan easy to reach after landing.",
+                  "items": [
+                    "Flight: LGA 9:00p Sun Aug 16 -> DTW 11:21p",
+                    "Pack: toothbrush, charger, sleep mask, clean shirt",
+                    "Mode: preserve energy for the long Pacific crossing"
+                  ]
+                },
+                "dtw": {
+                  "eyebrow": "13h 19m layover",
+                  "title": "Detroit overnight sleep stop",
+                  "summary": "Make this a real sleep block. Delta uses McNamara, so prioritize the Westin Detroit Metropolitan Airport or another very close airport hotel.",
+                  "items": [
+                    "Suggested stay: Westin Detroit Metropolitan Airport or close DTW hotel",
+                    "Plan: land, shower, sleep, breakfast, back to security by late morning",
+                    "Skip: downtown Detroit. The sleep value is higher than a late-night city run"
+                  ]
+                },
+                "icn-out": {
+                  "eyebrow": "1h 35m layover",
+                  "title": "Incheon quick transfer",
+                  "summary": "This one is a gate-to-gate reset. Stay airside, follow transfer signs, and avoid anything that pulls you away from the Bali gate.",
+                  "items": [
+                    "Activities: restroom, water refill, stretch, gate check",
+                    "Snack: only if it is directly on the way",
+                    "Rule: no immigration, no lounge quest, no cross-terminal wandering"
+                  ]
+                },
+                "dps": {
+                  "eyebrow": "Bali arrival and stay",
+                  "title": "Denpasar arrival plus Seminyak base",
+                  "summary": "You arrive late on Aug 18. The visible Capital One hotel starts Aug 21, so close the Aug 18-21 lodging gap before the trip.",
+                  "items": [
+                    "Needs booking: Aug 18-21 in Bali unless another reservation exists",
+                    "Booked: Rama Residence Seminyak, Aug 21-25",
+                    "First night plan: hotel transfer, shower, sleep, slow morning"
+                  ]
+                },
+                "icn-return": {
+                  "eyebrow": "9h 25m layover",
+                  "title": "Incheon daytime mini-adventure",
+                  "summary": "This is the fun layover. If entry permission and energy are clear, use an official Incheon Transit Tour or a strict self-guided Seoul Station/Hongdae plan.",
+                  "items": [
+                    "Best option: official ICN Transit Tour with passport and both boarding passes",
+                    "Self-guided option: AREX toward Seoul, lunch, short walk, return early",
+                    "Hard turn-back: start heading back around 2:45p"
+                  ]
+                },
+                "atl": {
+                  "eyebrow": "10h 10m layover",
+                  "title": "Atlanta overnight reset",
+                  "summary": "Clear U.S. entry, then sleep near the airport. The cleanest plan is a Gateway/SkyTrain hotel or a very reliable airport shuttle.",
+                  "items": [
+                    "Suggested stay: ATL Gateway hotel connected by SkyTrain",
+                    "Plan: customs, bags/recheck if needed, hotel, 3:45a return",
+                    "Skip: downtown Atlanta. The 6:00a LGA flight comes fast"
+                  ]
+                }
+              },
+              "segments": {
+                "lga-dtw": {
+                  "eyebrow": "Flight leg - 2h 21m",
+                  "title": "LGA to DTW",
+                  "summary": "Delta DL 1014 leaves LaGuardia at 9:00p on Sun Aug 16 and lands at Detroit at 11:21p.",
+                  "items": [
+                    "Flight length: 2h 21m",
+                    "Goal: arrive rested enough to walk straight to sleep",
+                    "Next stop: 13h 19m overnight layover in Detroit"
+                  ]
+                },
+                "dtw-icn-out": {
+                  "eyebrow": "Flight leg - 14h 45m",
+                  "title": "DTW to ICN",
+                  "summary": "Delta DL 159 leaves Detroit at 12:40p on Mon Aug 17 and reaches Incheon at 4:25p Tue Aug 18.",
+                  "items": [
+                    "Flight length: 14h 45m",
+                    "Strategy: sleep early, hydrate, then switch toward Korea/Bali time",
+                    "Next stop: 1h 35m Incheon transfer"
+                  ]
+                },
+                "icn-dps": {
+                  "eyebrow": "Flight leg - 6h 50m",
+                  "title": "ICN to DPS",
+                  "summary": "Delta DL 7872, operated by Korean Air, leaves Incheon at 6:00p Tue Aug 18 and lands in Bali at 11:50p.",
+                  "items": [
+                    "Flight length: 6h 50m",
+                    "Goal: nap if possible, then be ready for late-night arrival admin",
+                    "Next stop: Denpasar arrival and Bali lodging"
+                  ]
+                },
+                "dps-icn": {
+                  "eyebrow": "Flight leg - 7h 15m",
+                  "title": "DPS to ICN",
+                  "summary": "Delta DL 7873, operated by Korean Air, leaves Bali at 1:10a Tue Aug 25 and lands at Incheon at 9:25a.",
+                  "items": [
+                    "Flight length: 7h 15m",
+                    "Strategy: sleep immediately after takeoff",
+                    "Next stop: 9h 25m Incheon daytime layover"
+                  ]
+                },
+                "icn-atl": {
+                  "eyebrow": "Flight leg - 14h",
+                  "title": "ICN to ATL",
+                  "summary": "Delta DL 26 leaves Incheon at 6:50p Tue Aug 25 and reaches Atlanta at 7:50p the same local date.",
+                  "items": [
+                    "Flight length: 14h",
+                    "Strategy: reset toward U.S. time and keep documents handy",
+                    "Next stop: 10h 10m Atlanta overnight layover"
+                  ]
+                },
+                "atl-lga": {
+                  "eyebrow": "Flight leg - 2h 10m",
+                  "title": "ATL to LGA",
+                  "summary": "Delta DL 404 leaves Atlanta at 6:00a Wed Aug 26 and lands at LaGuardia at 8:10a.",
+                  "items": [
+                    "Flight length: 2h 10m",
+                    "Goal: simple final hop, coffee optional, sprinting forbidden",
+                    "Finish: back in New York"
+                  ]
+                }
+              }
+            }
+          </script>
+        </div>
+      </section>
+
+      <section class="section" id="layovers" aria-labelledby="layovers-title">
+        <div class="section-heading">
+          <p class="eyebrow">Layover Playbooks</p>
+          <h2 id="layovers-title">What to do with each pause</h2>
+          <p>
+            Each plan keeps a conservative return buffer. When sleep and immigration compete,
+            sleep usually wins.
+          </p>
+        </div>
+
+        <div class="layover-grid">
+          <article class="layover-card dtw-card">
+            <div>
+              <span class="pill">DTW - Aug 16 night</span>
+              <h3>Turn the 13h 19m stop into real sleep.</h3>
+              <p>
+                Best move: book the Westin Detroit Metropolitan Airport or another very close airport
+                hotel. Your Delta flights use McNamara, and this layover is long enough for a full
+                overnight reset without going into Detroit.
+              </p>
+            </div>
+            <ol class="micro-schedule">
+              <li><time>11:21p</time><span>Land at DTW and move slowly. No city run.</span></li>
+              <li><time>12:10a</time><span>Check in, shower, set two alarms.</span></li>
+              <li><time>8:45a</time><span>Wake, breakfast, refill bottle, repack overnight kit.</span></li>
+              <li><time>10:00a</time><span>Back toward security and the Delta departure area.</span></li>
+              <li><time>11:30a</time><span>Gate check for DL 159 to Incheon.</span></li>
+            </ol>
+            <p class="risk-note">
+              Carry what you need for the night. If checked bags are through-tagged to Bali, assume
+              you will not see them in Detroit.
+            </p>
+          </article>
+
+          <article class="layover-card icn-short-card">
+            <div>
+              <span class="pill">ICN - Aug 18 evening</span>
+              <h3>Keep the 1h 35m connection airside.</h3>
+              <p>
+                Treat this as a controlled transfer: restroom, water, a short walk, gate. Delta and
+                Korean Air are listed at Terminal 2, but gate changes can still eat the whole buffer.
+              </p>
+            </div>
+            <ol class="micro-schedule">
+              <li><time>4:25p</time><span>Arrive from DTW, follow transfer signs.</span></li>
+              <li><time>4:55p</time><span>Clear any transfer screening.</span></li>
+              <li><time>5:15p</time><span>Grab water or a compact snack near the gate.</span></li>
+              <li><time>5:25p</time><span>Be in the DPS gate area.</span></li>
+              <li><time>6:00p</time><span>Depart for Bali.</span></li>
+            </ol>
+            <p class="risk-note">
+              Do not attempt immigration, a lounge hunt, or shopping across terminals on this one.
+            </p>
+          </article>
+
+          <article class="layover-card icn-day-card">
+            <div>
+              <span class="pill">ICN - Aug 25 daytime</span>
+              <h3>Use the 9h 25m stop, but keep it airport-led.</h3>
+              <p>
+                Best move: reserve an official Incheon Transit Tour if your entry permission is clear.
+                The desk requires passport plus both boarding passes, and you need to be there 30
+                minutes before the tour. If timing or entry paperwork is fuzzy, stay inside ICN.
+              </p>
+            </div>
+            <ol class="micro-schedule">
+              <li><time>9:25a</time><span>Land, then decide based on immigration and energy.</span></li>
+              <li><time>10:45a</time><span>Latest comfortable time to be landside for any tour/city option.</span></li>
+              <li><time>11:15a</time><span>Transit tour, Seoul Station lunch, or Hongdae walk.</span></li>
+              <li><time>2:45p</time><span>Start the return to ICN. No heroic last stops.</span></li>
+              <li><time>4:00p</time><span>Back at Terminal 2 for exit process and DL 26.</span></li>
+            </ol>
+            <p class="risk-note">
+              AREX shows the airport-to-Seoul rail trip as roughly 67 minutes from the airport flow,
+              so a self-guided city visit needs a strict turn-back time.
+            </p>
+          </article>
+
+          <article class="layover-card atl-card">
+            <div>
+              <span class="pill">ATL - Aug 25 night</span>
+              <h3>Make the 10h 10m stop a protected sleep block.</h3>
+              <p>
+                Best move: skip downtown and book one of the Gateway/SkyTrain airport hotels. You
+                will be arriving internationally, so budget time for U.S. entry, baggage handling,
+                and getting landside before sleep.
+              </p>
+            </div>
+            <ol class="micro-schedule">
+              <li><time>7:50p</time><span>Arrive ATL from Incheon.</span></li>
+              <li><time>9:15p</time><span>Customs, bags, recheck, then hotel transfer.</span></li>
+              <li><time>10:00p</time><span>Sleep near the airport.</span></li>
+              <li><time>3:45a</time><span>Leave hotel for terminal and TSA.</span></li>
+              <li><time>5:20a</time><span>At the LGA gate with coffee and no sprinting.</span></li>
+            </ol>
+            <p class="risk-note">
+              ATL says the SkyTrain runs 24/7 and connects to several Gateway hotels. That is the
+              calmest overnight option.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section stay-section" id="stays" aria-labelledby="stays-title">
+        <div class="section-heading">
+          <p class="eyebrow">Stays</p>
+          <h2 id="stays-title">Where the trip needs a bed</h2>
+          <p>
+            Capital One shows the Seminyak hotel from Aug. 21 to Aug. 25. The arrival night gap before
+            that is the biggest thing to close.
+          </p>
+        </div>
+
+        <div class="stay-band">
+          <article>
+            <span class="pill warm">Suggested</span>
+            <h3>Aug 16: DTW airport sleep</h3>
+            <p>
+              Book the Westin DTW or an airport hotel with dependable late-night access. The goal is
+              not Detroit sightseeing; it is an uninterrupted 6-7 hour sleep block before the Pacific leg.
+            </p>
+          </article>
+          <article class="attention">
+            <span class="pill alert">Needs booking</span>
+            <h3>Aug 18-21: Bali arrival gap</h3>
+            <p>
+              You land at DPS at 11:50p on Tue Aug 18, but the visible hotel starts Fri Aug 21.
+              Reserve three nights or confirm a separate booking. Seminyak, Sanur, or an airport-area
+              first night would keep the arrival gentle.
+            </p>
+          </article>
+          <article>
+            <span class="pill booked">Booked</span>
+            <h3>Aug 21-25: Rama Residence Seminyak</h3>
+            <p>
+              Capital One lists Rama Residence Seminyak, Jl. Raya Petitenget No. 35, Seminyak, ID,
+              checking in Fri Aug 21 and checking out Tue Aug 25.
+            </p>
+          </article>
+          <article>
+            <span class="pill warm">Suggested</span>
+            <h3>Aug 25: ATL Gateway sleep</h3>
+            <p>
+              Book a SkyTrain-connected Gateway hotel or a close airport hotel shuttle. You need a
+              short, reliable transfer more than a fancy room.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section arrival-section" id="arrival" aria-labelledby="arrival-title">
+        <div class="section-heading">
+          <p class="eyebrow">Arrival Admin</p>
+          <h2 id="arrival-title">Documents and forms to handle before Bali</h2>
+          <p>
+            Check these in the week before departure. Requirements can change, and the final authority
+            is the government or airport source linked below.
+          </p>
+        </div>
+
+        <div class="checklist">
+          <article>
+            <h3>Indonesia entry</h3>
+            <ul>
+              <li>Passport valid at least six months beyond arrival.</li>
+              <li>Two blank visa pages for the entry stamp.</li>
+              <li>Visa or e-VOA/VOA for tourism, plus onward or return ticket.</li>
+              <li>Keep a copy of passport and visa/e-VOA confirmation offline.</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Bali-specific</h3>
+            <ul>
+              <li>Pay or prepare the Bali tourist levy: IDR 150,000.</li>
+              <li>Complete any required customs or arrival declaration before landing if available.</li>
+              <li>Use an official airport taxi, hotel transfer, or trusted ride app after midnight.</li>
+              <li>Keep the first 24 hours light: sleep, SIM/eSIM, cash, sunset.</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Connection habits</h3>
+            <ul>
+              <li>Screenshot boarding passes and hotel confirmations.</li>
+              <li>Pack one overnight kit in your personal item.</li>
+              <li>Set phone clock widgets for Detroit, Incheon, Bali, Atlanta, and New York.</li>
+              <li>Re-check Delta/Korean Air gates on every airport Wi-Fi login.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section source-section" aria-labelledby="sources-title">
+        <div class="section-heading">
+          <p class="eyebrow">Sources</p>
+          <h2 id="sources-title">Official links checked for the plan</h2>
+          <p>Last checked June 15, 2026.</p>
+        </div>
+        <ul class="source-list">
+          <li><a href="https://www.metroairport.com/">Detroit Metro Airport traveler guide, maps, and airport services</a></li>
+          <li><a href="https://www.airport.kr/ap_en/1470/subview.do">Incheon Airport official transit tour guide</a></li>
+          <li><a href="https://www.airportrailroad.com/main">AREX airport railroad route and terminal information</a></li>
+          <li><a href="https://www.atl.com/about-atl/airport-amenities/">ATL airport amenities and lounges</a></li>
+          <li><a href="https://www.atl.com/ground-transportation/">ATL ground transportation and SkyTrain hotel links</a></li>
+          <li><a href="https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Indonesia.html">U.S. State Department Indonesia entry information</a></li>
+          <li><a href="https://lovebali.baliprov.go.id/">Love Bali official tourist levy portal</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>Built as a local planning page. Flight schedules should be rechecked with Delta/Korean Air before departure.</p>
+    </footer>
+    <script src="route-map.js?v=stats-rail-3" defer></script>
+  </body>
+</html>
