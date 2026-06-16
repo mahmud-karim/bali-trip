@@ -24,6 +24,7 @@
       .replaceAll("'", "&#039;");
 
   const quickActions = Array.from(root.querySelectorAll("[data-route-jump-kind][data-route-jump-key]"));
+  const itineraryTarget = document.querySelector("#layovers");
 
   const detailVisuals = {
     lga: {
@@ -260,13 +261,38 @@
           </span>
           <span class="sheet-stat-copy"><span>Est. CO2</span><strong>2,134 kg</strong></span>
         </span>
-        <button type="button">
+        <button type="button" data-itinerary-trigger>
           <span>View full itinerary</span>
           <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m3 6 5-2 8 3 5-2v13l-5 2-8-3-5 2V6Z"></path><path d="M8 4v13"></path><path d="M16 7v13"></path></svg>
         </button>
       </div>
     `;
   };
+
+  const jumpToFullItinerary = () => {
+    if (!itineraryTarget) {
+      return;
+    }
+
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    itineraryTarget.scrollIntoView({
+      block: "start",
+      behavior: prefersReducedMotion ? "auto" : "smooth",
+    });
+    history.replaceState(null, "", "#layovers");
+    itineraryTarget.classList.remove("is-itinerary-focus");
+    itineraryTarget.offsetHeight;
+    itineraryTarget.classList.add("is-itinerary-focus");
+  };
+
+  document.addEventListener("click", (event) => {
+    if (!event.target.closest("[data-itinerary-trigger]")) {
+      return;
+    }
+
+    event.preventDefault();
+    jumpToFullItinerary();
+  });
 
   const setActive = (kind, key) => {
     active = { kind, key };
